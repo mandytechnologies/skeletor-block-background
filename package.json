@@ -1,0 +1,27 @@
+{
+    "name": "skeletor-block-background",
+    "version": "1.0.1",
+    "description": "Adds support for a block custom compound background",
+    "main": "index.js",
+    "scripts": {
+        "build": "wp-scripts build ./src/frontend.js ./src/backend.js",
+        "start": "wp-scripts start ./src/frontend.js ./src/backend.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@wordpress/scripts": "^24.6.0",
+        "classnames": "^2.3.2"
+    },
+    "plugin_data": {
+        "title": "Skeletor Block Settings — Background",
+        "author": "Mandy",
+        "author_profile": "https://mandydesign.com",
+        "download_url": "https://bitbucket.org/madebymandy/skeletor-block-background/get/master.zip",
+        "tested": "6.3.2",
+        "requires": "6.1.0",
+        "requires_php": "8.0",
+        "last_updated": "2023-10-26 09:49:00"
+    }
+}

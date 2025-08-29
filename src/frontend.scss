@@ -1,0 +1,12 @@
+.has-mobile-background {
+	// WordPress's default breakpoint is 782
+
+	// the custom properties listed here should be created by the plugin
+	@media screen and (max-width: 781px) {
+		/* stylelint-disable declaration-no-important */
+		background: var(--mobile-background, initial) !important;
+		background-blend-mode: var(--mobile-background-blend-mode, normal) !important;
+		background-attachment: var(--mobile-background-attachment, scroll) !important;
+		/* stylelint-enable declaration-no-important */
+	}
+}
