@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 class Mbbs_Plugin_Template {
 
 	/**
-	 * The single instance of Mbbs_Plugin_Template.
+	 * The single instance of Mbbs_Plugin_Template
 	 * @var 	object
 	 * @access  private
 	 * @since 	1.0.0
