@@ -2,20 +2,14 @@
 
 namespace Mandy;
 
-/**
- * Plugin Name:           QB - Block Settings — Background
- * Plugin URI:            https://github.com/mandytechnologies/skeletor-block-background
- * Description:           Adds support for a block custom compound background
- * Version:               1.0.2
- * Requires PHP:          7.0
- * Requires at least:     6.1.0
- * Tested up to:          6.8.2
- * Author:                Quick Build
- * Author URI:            https://www.quickbuildwebsite.com/
- * License:               GPLv2 or later
- * License URI:           https://www.gnu.org/licenses/
- * Text Domain:           qb-block-settings-background
- * 
+/*
+Plugin Name: Quick Build Block Settings — Background
+Plugin URI:  https://quickbuildwebsite.com
+Description: Adds support for a block custom compound background
+Version:     1.0.1
+Author:      Quick Build
+Author URI:  https://quickbuildwebsite.com
+Text Domain: quickbuild
 */
 
 // Exit if accessed directly
@@ -140,14 +134,14 @@ class SkeletorBlockBackground {
 
 add_action('after_setup_theme', ['\Mandy\SkeletorBlockBackground', 'setup']);
 
-define('MANDY_BLOCK_BACKGROUND_VERSION', '1.0.1');
+define('SKELETOR_BLOCK_BACKGROUND_VERSION', '1.0.1');
 
-require 'plugin-update-checker/plugin-update-checker.php';
+if (!class_exists('\Skeletor\Plugin_Updater')) {
+	require_once(__DIR__ . '/class--plugin-updater.php');
+}
 
-$update_checker = \Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/mandytechnologies/skeletor-block-background',
-	__FILE__,
-	'skeletor-block-background'
+$updater = new \Skeletor\Plugin_Updater(
+	plugin_basename(__FILE__),
+	SKELETOR_BLOCK_BACKGROUND_VERSION,
+	'https://bitbucket.org/madebymandy/skeletor-block-background/raw/HEAD/package.json'
 );
-
-require_once( 'includes/class-plugin.php' );
