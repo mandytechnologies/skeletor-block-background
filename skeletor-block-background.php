@@ -140,7 +140,7 @@ class SkeletorBlockBackground {
 
 add_action('after_setup_theme', ['\Mandy\SkeletorBlockBackground', 'setup']);
 
-define('MANDY_BLOCK_BACKGROUND_VERSION', '1.0.1');
+define('MANDY_BLOCK_BACKGROUND_VERSION', '1.0.2');
 
 require 'plugin-update-checker/plugin-update-checker.php';
 
